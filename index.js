@@ -33,7 +33,7 @@ const userInfo = () => {
         },
             {
                 type: 'input',
-                name: 'Title of Project',
+                name: 'title',
                 message: 'What is the name of your New Project?',
                 validate: nameInput => {
                     if (nameInput) {
@@ -46,7 +46,7 @@ const userInfo = () => {
             },   
             {
                 type: 'input',
-                name: 'Description',
+                name: 'description',
                 message: 'Write a Quick Description of your Project',
                 validate: nameInput => {
                     if (nameInput) {
@@ -68,11 +68,24 @@ const userInfo = () => {
                     }
                 }
             },
+            {
+                type: 'input',
+                name: 'test', 
+                message: 'What command should be run to run tests?',
+                default: 'npm test'
+            },
+            {
+                type: 'list',
+                name: 'license',
+                message: 'license and registration please...',
+                choices: ['MIT', 'zLib', 'GNU'],
+                default: 'MIT'
+            }
         ])
     };
 
 const writeFile = data => {
-    fs.writeFile('README.md', data, err => { 
+    fs.writeFile('Project-README.md', data, err => { 
         if (err) {
             console.log(err);
             return;
