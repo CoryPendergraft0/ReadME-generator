@@ -81,11 +81,11 @@ const userInfo = () => {
                 choices: ['MIT', 'zLib', 'GNU'],
                 default: 'MIT'
             }
-        ])
-    };
+    ]   )
+};
 
 const writeFile = data => {
-    fs.writeFile('README.md', data, err => { 
+    fs.writeFile('Proj-README.md', data, err => { 
         if (err) {
             console.log(err);
             return;
@@ -94,6 +94,7 @@ const writeFile = data => {
         }
     })
 }; 
+
 userInfo()
 .then(answers => {
     return generatePage(answers);
