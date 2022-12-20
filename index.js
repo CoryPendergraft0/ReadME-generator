@@ -16,6 +16,19 @@ inquirer
                 }
             }
        },
+       {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email?',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Everyone has an email, whats yours?');
+                return false;
+            }
+        }
+   },
         {
             type: 'input',
             name: 'Title of Project',
@@ -43,8 +56,16 @@ inquirer
         },
         {
             type: 'input',
-            
-        }
+            name: 'install',
+            message: 'What is required to run this projhect?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please hurry, i cannot read your mind')
+                }
+            }
+        },
 
 
 
