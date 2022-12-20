@@ -13,7 +13,7 @@ This weeks homework was to build a "readME generator" using everything we learne
 
 
 ## Visuals
-![Here is a picture of the deployed application]();
+![Here is a picture of the opening of "node index.js](./assets/images/opening.png);
 
-![Here is a picture of the application looking into local storage]();
+![Here is a picture of the application after a created ReadME](./assets/images/created.png);
 
