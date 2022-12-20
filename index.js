@@ -85,7 +85,7 @@ const userInfo = () => {
     };
 
 const writeFile = data => {
-    fs.writeFile('Project-README.md', data, err => { 
+    fs.writeFile('README.md', data, err => { 
         if (err) {
             console.log(err);
             return;
