@@ -30,7 +30,7 @@ const userInfo = () => {
                     return false;
                 }
             }
-        },
+            },
             {
                 type: 'input',
                 name: 'title',
